@@ -3,12 +3,12 @@
 
     <item android:id="@+id/home"
         android:title="Alarmas"
-        android:icon="@drawable/ic_home_alarm" />
+        android:icon="@drawable/ic_home_alarm"/>
     <item android:id="@+id/achievements"
         android:title="Logros"
-        android:icon="@drawable/ic_achievements" />
+        android:icon="@drawable/ic_achievements"/>
     <item android:id="@+id/settings"
         android:title="Configuracion"
-        android:icon="@drawable/ic_settings" />
+        android:icon="@drawable/ic_settings"/>
 
 </menu>

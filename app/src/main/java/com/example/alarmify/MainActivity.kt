@@ -12,14 +12,20 @@ class MainActivity : AppCompatActivity() {
     lateinit var home_alarm_Fragment: HomeAlarmFragment
     lateinit var achievements_Fragment: AchievementsFragment
     lateinit var settings_Fragment: SettingsFragment
+    lateinit var alarm_details: Alarm_details
 
+    var alarmArrayList: ArrayList<Alarm> = ArrayList<Alarm>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
+
         home_alarm_Fragment = HomeAlarmFragment()
         achievements_Fragment = AchievementsFragment()
         settings_Fragment = SettingsFragment()
+        alarm_details = Alarm_details()
 
         bottomNavigationView = findViewById<BottomNavigationView>(R.id.btmNavBar)
         loadFragment(HomeAlarmFragment())

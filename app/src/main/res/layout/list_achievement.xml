@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".HomeAlarmFragment"
-    android:background="@color/darkPurple">
-
-    <TextView
-        android:id="@+id/txt_achievements_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingStart="15dp"
-        android:paddingTop="10dp"
-        android:text="Logros"
-        android:textColor="@color/yellow"
-        android:textSize="50sp"
-        android:textStyle="bold" />
-
-    <View
-        android:id="@+id/achievements_divide_view"
-        android:background="@color/purple"
-        android:layout_width = "360dp"
-        android:layout_height="5dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"/>
+    android:layout_height="match_parent">
 
 
 
@@ -31,8 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="90dp"
         android:background="@drawable/list_alarm_bg"
-        android:layout_margin="10dp"
-        android:layout_below="@+id/achievements_divide_view">
+        android:layout_margin="5dp">
 
         <ImageView
             android:layout_width="60dp"
@@ -82,5 +59,4 @@
 
     </RelativeLayout>
 
-
-</RelativeLayout>
+</LinearLayout>

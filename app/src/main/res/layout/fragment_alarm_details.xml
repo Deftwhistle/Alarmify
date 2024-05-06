@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Alarm_details"
+    android:background="@color/darkPurple">
+
+    <TextView
+        android:id="@+id/txt_home_alarm_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Detalles de alarma"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:layout_below="@+id/txt_home_alarm_title"
+        android:layout_alignParentStart="true"
+        android:layout_margin="5dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/list_alarm_bg">
+
+        <TextView
+            android:id="@+id/txt_nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="nombre"
+            android:textColor="@color/white"
+            android:textSize="20sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/txt_hora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/txt_ampm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="155dp"
+            android:layout_marginTop="55dp"
+            android:gravity="center"
+            android:text="am"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="235dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/details_ringtone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="275dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="Default"
+            android:textColor="@color/white"
+            android:textSize="30sp"/>
+
+
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_alarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="290dp"
+            android:layout_marginEnd="43dp"
+            android:checked="true"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:theme="@style/SCBSwitch" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="130dp"
+            android:background="@drawable/round_button"
+            android:paddingLeft="10dp"
+            android:paddingTop="0dp"
+            android:paddingRight="10dp"
+            android:text="S"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="130dp"
+            android:layout_toEndOf="@+id/button"
+            android:background="@drawable/round_button"
+            android:paddingLeft="10dp"
+            android:paddingTop="0dp"
+            android:paddingRight="10dp"
+            android:text="M"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="130dp"
+            android:layout_toEndOf="@+id/button2"
+            android:background="@drawable/round_button"
+            android:paddingLeft="10dp"
+            android:paddingTop="0dp"
+            android:paddingRight="10dp"
+            android:text="T"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="130dp"
+            android:layout_toEndOf="@+id/button3"
+            android:background="@drawable/round_button"
+            android:paddingLeft="10dp"
+            android:paddingTop="0dp"
+            android:paddingRight="10dp"
+            android:text="W"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="130dp"
+            android:layout_toEndOf="@+id/button4"
+            android:background="@drawable/round_button"
+            android:paddingLeft="10dp"
+            android:paddingTop="0dp"
+            android:paddingRight="10dp"
+            android:text="T"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="130dp"
+            android:layout_toEndOf="@+id/button5"
+            android:background="@drawable/round_button"
+            android:paddingLeft="10dp"
+            android:paddingTop="0dp"
+            android:paddingRight="10dp"
+            android:text="F"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="130dp"
+            android:layout_toEndOf="@+id/button6"
+            android:background="@drawable/round_button"
+            android:paddingLeft="10dp"
+            android:paddingTop="0dp"
+            android:paddingRight="10dp"
+            android:text="S"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="240dp"
+            android:gravity="center"
+            android:text="Letters"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="200dp"
+            android:gravity="center"
+            android:text="Maze"
+            android:textColor="@color/darkGray"
+            android:textSize="40sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="280dp"
+            android:gravity="center"
+            android:text="Snake"
+            android:textColor="@color/darkGray"
+            android:textSize="40sp" />
+
+
+
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:contentDescription="@string/button_new_alarm"
+        android:focusable="true"
+        android:onClick="agregar_alarma"
+        android:src="@android:drawable/ic_menu_add"
+        android:backgroundTint="@color/yellow"/>
+
+
+</RelativeLayout>

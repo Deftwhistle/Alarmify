@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/list_alarm_bg"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/txt_nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="nombre"
+            android:textColor="@color/white"
+            android:textSize="15sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/txt_hora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/txt_ampm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:text="am"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txt_sunday"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:text="S"
+            android:textColor="@color/darkGray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txt_monday"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="165dp"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:text="M"
+            android:textColor="@color/darkGray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txt_tuesday"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:text="T"
+            android:textColor="@color/darkGray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txt_wednesday"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="195dp"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:text="W"
+            android:textColor="@color/darkGray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txt_thursday"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="210dp"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:text="T"
+            android:textColor="@color/darkGray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txt_friday"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="225dp"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:text="F"
+            android:textColor="@color/darkGray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txt_saturday"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="240dp"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:text="S"
+            android:textColor="@color/darkGray"
+            android:textSize="15sp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_alarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:checked="false"
+            android:theme="@style/SCBSwitch"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

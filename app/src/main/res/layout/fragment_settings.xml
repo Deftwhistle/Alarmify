@@ -5,14 +5,98 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeAlarmFragment"
-    android:background="#957B2E">
+    android:background="@color/darkPurple">
+
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
         android:text="Configuracion"
+        android:textColor="@color/yellow"
         android:textSize="50sp"
-        android:textStyle="bold"
-        android:textColor="@color/black" />
+        android:textStyle="bold" />
+    <View
+        android:background="@color/purple"
+        android:layout_width = "360dp"
+        android:layout_height="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="20dp"
+        android:paddingStart="15dp"
+        android:text="Mostrar Segundos"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="80dp"
+        android:layout_toEndOf="@+id/textView2"
+        android:checked="true"
+        android:theme="@style/SCBSwitch"
+        android:scaleX="2"
+        android:scaleY="2"
+        />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:clickable="true"
+        android:text="Zona Horaria"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_toEndOf="@+id/textView3"
+        android:clickable="true"
+        android:text="(GMT-5:00)"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:clickable="true"
+        android:text="Tema"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_toEndOf="@+id/textView3"
+        android:clickable="true"
+        android:text="Oscuro"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
 </RelativeLayout>
