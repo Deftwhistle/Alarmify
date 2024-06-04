@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/timer_fragment"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/darkPurple">
+    android:layout_height="match_parent">
 
     <com.simplemobiletools.commons.views.MyRecyclerView
         android:id="@+id/timers_list"
@@ -29,7 +28,6 @@
         android:layout_margin="@dimen/activity_margin"
         android:contentDescription="@string/new_timer"
         android:src="@drawable/ic_plus_vector"
-        app:backgroundTint="@color/yellow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:rippleColor="@color/pressed_item_foreground" />
