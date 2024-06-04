@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission
+        android:name="android.permission.SCHEDULE_EXACT_ALARM"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE"
+        tools:node="remove" />
+
+    <uses-permission
+        android:name="android.permission.USE_FINGERPRINT"
+        tools:node="remove" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:appCategory="productivity"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_launcher_name"
+        android:localeConfig="@xml/locale_config"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/SplashTheme">
+
+            <intent-filter>
+                <action android:name="com.simplemobiletools.clock.TOGGLE_STOPWATCH" />
+                <action android:name="android.intent.action.SHOW_ALARMS" />
+                <action android:name="android.intent.action.SHOW_TIMERS" />
+                <action android:name="android.intent.action.SET_ALARM" />
+                <action android:name="android.intent.action.SET_TIMER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.DISMISS_ALARM" />
+                <action android:name="android.intent.action.DISMISS_TIMER" />
+
+                <data android:scheme="id" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.IntentHandlerActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".activities.MainActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".activities.ReminderActivity"
+            android:configChanges="orientation"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:showOnLockScreen="true"
+            android:taskAffinity=".ReminderActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SNOOZE_ALARM" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:configChanges="orientation"
+            android:exported="true"
+            android:label="@string/settings"
+            android:parentActivityName=".activities.MainActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.simplemobiletools.commons.activities.AboutActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:label="@string/about"
+            android:parentActivityName=".activities.MainActivity" />
+
+        <activity
+            android:name="com.simplemobiletools.commons.activities.CustomizationActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:label="@string/customize_colors"
+            android:parentActivityName=".activities.SettingsActivity" />
+
+        <activity
+            android:name=".activities.SnoozeReminderActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:theme="@style/Theme.Transparent" />
+
+        <service android:name=".services.SnoozeService" />
+
+        <service
+            android:name=".services.TimerService"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Used to notify the user that timers are running" />
+        </service>
+
+
+        <receiver android:name=".receivers.AlarmReceiver" />
+
+        <receiver android:name=".receivers.HideTimerReceiver" />
+
+        <receiver android:name=".receivers.HideAlarmReceiver" />
+
+        <receiver android:name=".receivers.DismissAlarmReceiver" />
+
+        <receiver android:name=".receivers.EarlyAlarmDismissalReceiver" />
+
+        <receiver
+            android:name=".receivers.BootCompletedReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+
+        <activity-alias
+            android:name=".activities.SplashActivity.Purple"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_purple"
+            android:roundIcon="@mipmap/ic_launcher_purple"
+            android:targetActivity=".activities.SplashActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".activities.SplashActivity.Orange"
+            android:enabled="true"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:roundIcon="@mipmap/ic_launcher"
+            android:targetActivity=".activities.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+    </application>
+</manifest>
